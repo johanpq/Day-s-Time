@@ -8,10 +8,11 @@
 }
 body {
     height: 80vh;
-    background-color: rgb(73, 83, 83);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(209, 235, 161, 0.726);
 }
 header {
-    background-color: aquamarine;
+    background-color: rgba(127, 255, 212, 0.253);
 }
 header h1 {
     text-align: center;
@@ -35,23 +36,31 @@ main {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.247);
     border-radius: 30%;
 
-    overflow: hidden; /*Se ultrapassar a caixa main ele esconde*/
+    overflow: hidden; /*Se a imagem ultrapassar a caixa main ele esconde*/
 }
 div {
     display: block;
     position: absolute;
-    margin-top: 100px; 
+    margin-top: 300px;
 }
 div.time {
     display: flex;
+    background-color: rgba(0, 255, 255, 0.226);
+    color: black;
+    font-size: larger;
     align-self: flex-end;
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    border-radius: 6px;
+    box-shadow: 0px 0px 0px 0px rgba(180, 59, 59, 0.205);
+    padding: 2px;
+    margin: 4px;
 }
 img {
     display: block;
-    max-height: 80vh;
+    height: 80vh;
     max-width: 80vw;
     border-radius: 30%;
-    margin-top: -220px;
+    margin-top: -210px;
 }
 .sun-going-down {display: block;}
 .morning-day {display: none;}
