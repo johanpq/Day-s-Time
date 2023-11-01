@@ -12,7 +12,7 @@ body {
     background-color: rgba(209, 235, 161, 0.726);
 }
 header {
-    background-color: rgba(127, 255, 212, 0.253);
+    background-color: rgba(102, 172, 148, 0.041);
 }
 header h1 {
     text-align: center;
@@ -62,7 +62,7 @@ img {
     border-radius: 30%;
     margin-top: -210px;
 }
-.sun-going-down {display: block;}
+.sun-going-down {display: none;}
 .morning-day {display: none;}
 .sun-rising {display: none;}
 .night {display: none;}
