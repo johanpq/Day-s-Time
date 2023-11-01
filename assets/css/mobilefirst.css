@@ -39,13 +39,16 @@ main {
     overflow: hidden; /*Se a imagem ultrapassar a caixa main ele esconde*/
 }
 div {
-    display: block;
+    display: flex;
     position: absolute;
-    margin-top: 335px;
+    align-self: flex-end;
+    margin-bottom: 65px;
+    
     /*transition: margin-top 0.5s;*/
 }
 div.time {
     display: flex;
+    position: absolute;
     background-color: rgba(0, 255, 255, 0.226);
     color: black;
     font-size: larger;
