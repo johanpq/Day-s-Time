@@ -15,3 +15,7 @@ Este é um projeto simples desenvolvido utilizando HTML5, CSS3 e JavaScript. A p
 
 1. Clone este repositório: `git clone https://github.com/johanpq/Day-s-Time.git`
 2. Abra o arquivo `index.html` em seu navegador web.
+
+## Demonstração Online
+
+Acesse a [demo online](https://johanpq.github.io/Day-s-Time/) para explorar a Landing Page do Hotel ao vivo.
