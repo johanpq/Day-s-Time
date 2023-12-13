@@ -9,7 +9,7 @@ Este é um projeto simples desenvolvido utilizando HTML5, CSS3 e JavaScript. A p
 
 ## Demonstração
 
-![Image of the day according to your time](day's time image.png)
+![Image of the day according to your time](day-time-image.png)
 
 ## Como Utilizar
 
