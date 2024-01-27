@@ -66,8 +66,11 @@ img {
     border-radius: 30%;
     margin-top: -210px;
 }
-.sun-going-down {display: none;}
-.morning-day {display: none;}
-.sun-rising {display: block;}
-.night {display: none;}
+
+.hide {display: none;}
+
+.show {display: block;}
+
+.color1 {background-color: rgba(156, 147, 18, 0.616)}
+.color2{background-color: rgba(18, 156, 59, 0.911)}
 
