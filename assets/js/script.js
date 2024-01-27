@@ -1,40 +1,48 @@
-var now = new Date()
-var time = now.getHours()
-var minutes = now.getMinutes()
+var now = new Date();
+var hours = now.getHours();
+var minutes = now.getMinutes();
 
-var TextHTML = document.getElementById("Text")
-var Time = document.getElementById('Time')
-var color = document.querySelector('body')
+var PrintTime = hours + ":" + minutes;
+console.log(PrintTime);
 
-Time.innerHTML = time + ":"+ minutes
+var FatherElement = document.querySelector('main');
 
-var imgSunGoingDown = document.getElementById('SunGoingDown')
-var imgMorningDay = document.getElementById('MorningDay')
-var imgSunRising = document.getElementById('SunRising')
-var imgNight = document.getElementById('Night')
+var Div = document.createElement('div');
+Div.classList.add('time');
 
+Div.innerText = PrintTime;
 
-if(time >= 5 && time <= 6) {
-    imgSunRising.style.display = "block"
-    TextHTML.innerHTML = "<strong>Sun is coming out</strong>"
-    color.style.background = "rgba(156, 147, 18, 0.616"
-} else if(time > 6 && time <= 17) {
-    imgSunRising.style.display = "none"
-    imgMorningDay.style.display = "block"
-    TextHTML.innerHTML = "<strong>It's daytime</strong>"
-    color.style.background = "rgba(18, 156, 59, 0.911)"
-} else if(time == 17 && minutes >= 30) {
-    imgMorningDay.style.display = "none"
-    imgSunGoingDown.style.display = "block"
-    TextHTML.innerHTML = "<strong>Sun is going down</strong>"
-    color.style.background = "rgba(182, 98, 59, 0.897)"
-} else if(time == 18 && minutes <= 10) {
-    imgSunGoingDown.style.display = "block"
-    TextHTML.innerHTML = "<strong>It's almost night</strong>"
-    color.style.background = "rgba(182, 98, 59, 0.897)"
-} else if(time == 18 && minutes >= 11) {
-    imgSunGoingDown.style.display = "none"
-    imgNight.style.display = "block"
-    TextHTML.innerHTML = "<strong>It's night</strong>"
-    color.style.background = "rgba(102, 172, 148, 0.041)"
+FatherElement.appendChild(Div);
+
+var SunRising = document.getElementById('SunRising');
+
+var MorningDay = document.getElementById('MorningDay');
+
+var SunGoingDown = document.getElementById('SunGoingDown');
+
+var Night = document.getElementById('Night');
+
+SunRising.classList.add('hide');
+MorningDay.classList.add('hide');
+SunGoingDown.classList.add('hide');
+Night.classList.add('hide');
+
+if (hours >= 5 && (hours < 6 || (hours === 6 && minutes < 30))) {
+    SunRising.classList.remove('hide');
+    SunRising.classList.add('show');
+} else if (hours >= 6 && hours < 17) {
+    SunRising.classList.remove('show');
+    SunRising.classList.add('hide');
+    MorningDay.classList.remove('hide');
+    MorningDay.classList.add('show');
+} else if (hours >= 17 && (hours < 18 || (hours === 18 && minutes < 20))) {
+    MorningDay.classList.remove('show');
+    MorningDay.classList.add('hide');
+    SunGoingDown.classList.remove('hide');
+    SunGoingDown.classList.add('show');
+} else {
+    SunGoingDown.classList.remove('show');
+    SunGoingDown.classList.add('hide');
+    Night.classList.remove('hide');
+    Night.classList.add('show');
 }
